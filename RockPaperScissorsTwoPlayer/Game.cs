@@ -42,10 +42,8 @@ namespace RockPaperScissorsTwoPlayer
                 if (winner.Contains("Nobody"))
                 {
                     _console.WriteLine("It's a Tie!");
-                    if (players.Any(p => p.Winner()))
-                    {
+                    if (players.Any(p => p.Winner())) 
                         round++;
-                    }
                     else
                         endGame = false;
                 }
