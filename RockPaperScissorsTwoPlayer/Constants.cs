@@ -5,7 +5,7 @@
         private static string _welcomeMessage = "Welcome to Rock,Paper,Scissors!\nChoose Player type:\n1)Human Player\t\t2)Computer Player\t\t3)Quit\t\t4)Clear Screen";
         private static string _chooseMessage = "Round 1\nPick your Choice:\n1)Rock\t\t2)Paper\t\t3)Scissors\t\t4)Quit";
 
-        public enum PlayerType
+        public enum PlayerMode
         {
             HumanPLayer = 1,
             Computer = 2,
