@@ -25,7 +25,7 @@ namespace TestRockPaperScissors
             humanPlayer.Play(ref input_playerFlag);
             
             Assert.Pass();
-            Assert.AreEqual(input_playerFlag, expected_playerFlag);
+            Assert.AreEqual(input_playerFlag, expected_playerFlag, "Equal");
         }
 
         [Test]
@@ -40,7 +40,7 @@ namespace TestRockPaperScissors
             computerPlayer.Play(ref input_playerFlag);
             
             Assert.Pass();
-            Assert.AreEqual(input_playerFlag, expected_playerFlag);
+            Assert.AreEqual(input_playerFlag, expected_playerFlag, "Equal");
         }
 
         [Test]
@@ -49,6 +49,9 @@ namespace TestRockPaperScissors
             Assert.AreEqual(Constants.Choice.Paper, Constants.GetWinningChoice(Constants.Choice.Rock, Constants.Choice.Paper), "Equal");
             Assert.AreEqual(Constants.Choice.Scissors, Constants.GetWinningChoice(Constants.Choice.Scissors, Constants.Choice.Paper), "Equal");
             Assert.AreEqual(Constants.Choice.Rock, Constants.GetWinningChoice(Constants.Choice.Rock, Constants.Choice.Scissors), "Equal");
+            Assert.AreNotEqual(Constants.Choice.Rock, Constants.GetWinningChoice(Constants.Choice.Rock, Constants.Choice.Paper), "Not Equal");
+            Assert.AreNotEqual(Constants.Choice.Paper, Constants.GetWinningChoice(Constants.Choice.Scissors, Constants.Choice.Paper), "Not Equal");
+            Assert.AreNotEqual(Constants.Choice.Scissors, Constants.GetWinningChoice(Constants.Choice.Rock, Constants.Choice.Scissors), "Not Equal");
         }
     }
 }
